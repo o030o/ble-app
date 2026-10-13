@@ -18,7 +18,7 @@ async function connect() {
     try {
         document.getElementById("status").innerHTML = "狀態：搜尋裝置中...";
         bleDevice = await navigator.bluetooth.requestDevice({
-            filters: [{ name: "Interactive_Device" }],//藍牙名稱 跟arduino code那邊要一樣
+            filters: [{ name: "Interactive_Device" }],//藍牙名稱 跟arduino code(146行)那邊要一樣
             optionalServices: [SERVICE]
         });
 
